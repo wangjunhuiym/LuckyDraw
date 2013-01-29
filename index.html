@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>云平台抽奖系统</title>
+	<link href="style/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="script/config.js"></script>
+	<script type="text/javascript" src="script/lib.js"></script>
+	<script type="text/javascript" src="script/resource.js"></script>
+	<script type="text/javascript" src="script/app.js"></script>
+	<script type="text/javascript" src="script/app-test.js"></script>
+</head>
+<body>
+	<div id="ctrl"></div>
+	<div class="oneOut">
+		<div></div>
+	</div>
+	<div class="OFF" title="关闭本程序">关闭</div>
+	<!--The main scene page-->
+	<div class="Top">
+		<!--The operation tab-->
+		<div id="Go">
+			<fieldset class="MainBG">
+				<div id="Main">
+					<h2 class="title">
+						<input class="QD" onclick="App.StartDrawEngine();" type="button" value="启动抽奖系统(回车)" />
+					</h2>
+					<div id="candidate-count-info">抽奖人数：
+						<span id="candidate-count-info-value">120</span>
+					</div>
+					<div class="input">
+					</div>
+				</div>
+				<div id="input">
+					<input id="start" name="start" type="button" value="开始(空格)" disabled />
+					<input id="end" name="end" type="button" value="停止(空格)" disabled />
+					<input id="nextGroup" name="nextGroup" type="button" value="下一组(回车)" disabled />
+				</div>
+			</fieldset>
+		</div>
+		<!--/The operation tab-->
+		<!--The result tab-->
+		<div id="out">
+			<fieldset>
+				<legend> 中奖结果 </legend>
+				<ul id="tableOUT">
+					<li style="display:none" />
+				</ul>
+			</fieldset>
+		</div>
+		<!--/The result tab-->
+	</div>
+	<!--/The main scene page-->
+	
+	<!--The result page-->
+	<div class="End" align="center">
+		<ul></ul>
+	</div>
+	<!--/The result page-->
+</body>
+</html>
